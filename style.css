@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    border-radius: 20px;
+}
+.bg-black{
+    background-color: black;
+    color: white;
+}
+.bg-white
+{
+    background-color: white;
+    color: black;
+    }
+
+.left{
+    width: 25vw;
+    /* background-color: #3a3838; */
+    
+    
+    
+}
+
+.right{
+    width: 75vw;
+    height: 84vh;
+    overflow-y: scroll;
+    
+}
+
+.home ul li{
+    display: flex;
+    width: 70px;
+    gap: 13px;
+    list-style: none;
+
+   
+}
+
+.home ul{
+    margin-top: 20px;
+}
+.home{
+    padding: 10px;
+    background-color: #201f1f;
+}
+
+.library{
+    background-color: #201f1f;
+}
+
+.heading-lib{
+    align-items: center;
+    gap: 8px;
+}
+.heading-lib h1{
+    font-size: 15px;
+}
+
+.heading-lib .add{
+    gap: 20px;
+}
+.tags{
+    gap: 10px;
+}
+.tags p{ 
+    border: 1px solid black;
+    background-color: #3a3838;
+    font-size: 12px;
+    border-radius: 52px;
+    margin-top: 10px;
+    padding: 5px; 
+}
+
+.artits-section {
+    padding: 16px;
+    border: 1px solid #201f1f;
+    border-radius: 40px;
+    background-color: #201f1f;
+    align-items: center;
+    gap: 2px;
+}
+
+.artits-section .image{
+    background-image: url("img/arjit\ singh");
+    width: 73px;
+    height: 67px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+}
+
+.music-player{
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    height: 14vh;
+    background-color: #201f1f;
+    position: fixed;
+}
+
+.control-action{
+    height: 24%;
+    background-color: #201f1f;
+    
+}
+.controls{
+    padding: 10px;
+    justify-content: center;
+    height: 9vh;
+    gap: 50%;
+    align-items: baseline;
+
+}
+.control-1{
+    position: fixed;
+}
+.control-2{
+    
+    
+}
