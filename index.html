@@ -4,114 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
+    <title>Spotify - Web Player: Music for everyone</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 </head>
 
-<body id="body" class="bg-black" >
+<body id="body" class="bg-black">
     <div>
-    <div  class="flex boxs">
-        <div class="left border">
-            <div class="home border p-1 ">
-                <span><i class="fa fa-spotify" style="font-size:30px; color: green;"></i><strong>Spotify</strong></span>
-                <ul>
-                <!-- <li><i class="fa fa-spotify" style="font-size:30px;"></i><strong>Spotify</strong></li> -->
-                <li><span class="material-symbols-outlined">home</span>Home</li>
-                <li><span class="material-symbols-outlined">search</span>Search</li>
+        <div class="flex boxs">
+            <div class="left border">
+                <div class="home border p-1 ">
+                    <span><i class="fa fa-spotify"
+                            style="font-size:30px; color: green;"></i><strong>Spotify</strong></span>
+                    <ul>
+                        <!-- <li><i class="fa fa-spotify" style="font-size:30px;"></i><strong>Spotify</strong></li> -->
+                        <li><span class="material-symbols-outlined">home</span>Home</li>
+                        <li><span class="material-symbols-outlined">search</span>Search</li>
 
-                </ul>
+                    </ul>
+                </div>
+
+                <div class="library border p-1 ">
+                    <div class="heading-lib flex">
+                        <div class="lib-ico">
+                            <span class="material-symbols-outlined">library_music</span>
+                        </div>
+                        <div class="lib-heading">
+                            <h1>Your library</h1>
+                        </div>
+                        <div class="add">
+                            <span class="material-symbols-outlined">add</span>
+
+                        </div>
+                    </div>
+
+                    <div class="tags flex">
+                        <div class="playlist-tag">
+                            <p>Playlist</p>
+                        </div>
+                        <div class="artist-tag">
+                            <p>Artists</p>
+                        </div>
+                    </div>
+
+                    <div class="artists">
+                        <div class="artits-section flex ">
+                            <div class="image "></div>
+                            <div class="info">
+                                <h3>Arjit Singh</h3>
+                                <p></p>
+
+                            </div>
+                        </div>
+                        <div class="artits-section flex ">
+                            <div class="image "></div>
+                            <div class="info">
+                                <h3>Arjit Singh</h3>
+                                <p></p>
+
+                            </div>
+                        </div>
+                        <div class="artits-section flex ">
+                            <div class="image "></div>
+                            <div class="info">
+                                <h3>Arjit Singh</h3>
+                                <p></p>
+
+                            </div>
+                        </div>
+                        <div class="artits-section flex ">
+                            <div class="image "></div>
+                            <div class="info">
+                                <h3>Arjit Singh</h3>
+                                <p></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="control-action border">
+                </div>
             </div>
 
-            <div class="library border p-1 ">
-                <div class="heading-lib flex">
-                    <div class="lib-ico">
-                        <span class="material-symbols-outlined">library_music</span>
+            <div class="right border">
+                <div class="navigation border flex ">
+                    <div class="arrows">
+                        <span class="material-symbols-outlined">
+                            chevron_left
+                        </span>
+                        <span class="material-symbols-outlined">
+                            navigate_next
+                        </span>
                     </div>
-                    <div class="lib-heading">
-                        <h1>Your library</h1>
-                    </div>
-                    <div class="add">
-                        <span class="material-symbols-outlined">add</span>
 
+                    <div class="auth">
+                        <button>SignUp</button>
+                        <button>Login</button>
                     </div>
                 </div>
 
-                <div class="tags flex">
-                    <div class="playlist-tag"><p>Playlist</p></div>
-                    <div class="artist-tag"><p>Artists</p></div>
+                <div class="playlist">
+
+                    <h2>Spotify Playlists</h2>
+                    <div id="playlistContainer" class="list-playlist flex"> </div>   
+                        
+                        <!-- <div class="card">
+                            <div id="inner-card" class="inner-card flex">
+                                <div class="card-play"><span class="material-symbols-outlined">
+                                        play_circle
+                                    </span></div>
+                            </div>
+                            <div class="card-title ">
+                                <strong>
+                                    <p id="title">Romantic Song</p>
+                                </strong>
+                                <p id="subject" style="font-size: 13px; color:   rgb(172, 177, 182);">Listen Heart Touching Songs</p>
+                            </div>
+                        </div> -->
+                        <div id="SongsContainer" class="list-playlist flex"> </div>   
+
+                        
+
+                    
                 </div>
+            </div>
+            <div class="music-player border ">
+                <div class="controls border">
+                    <div class="control-1">
+                        <span class="material-symbols-outlined" style="font-size: 50px;">
+                            skip_previous
+                        </span>
+                        <span class="material-symbols-outlined" style="font-size: 50px;">
+                            play_circle
+                        </span>
+                        <span class="material-symbols-outlined" style="font-size: 50px;">
+                            skip_next
+                        </span>
+                    </div>
 
-                <div class="artists">
-                    <div class="artits-section flex ">
-                        <div class="image "></div>
-                        <div class="info">
-                            <h3>Arjit Singh</h3>
-                            <p></p>
-                        
-                        </div>
-                    </div>
-                    <div class="artits-section flex ">
-                        <div class="image "></div>
-                        <div class="info">
-                            <h3>Arjit Singh</h3>
-                            <p></p>
-                        
-                        </div>
-                    </div>
-                    <div class="artits-section flex ">
-                        <div class="image "></div>
-                        <div class="info">
-                            <h3>Arjit Singh</h3>
-                            <p></p>
-                        
-                        </div>
-                    </div>
-                    <div class="artits-section flex ">
-                        <div class="image "></div>
-                        <div class="info">
-                            <h3>Arjit Singh</h3>
-                            <p></p>
-                        
-                        </div>
+                    <div class="control-2">
+                        <span class="material-symbols-outlined" style="font-size: 50px;">
+                            volume_up
+                        </span>
                     </div>
                 </div>
-
             </div>
-            <div class="control-action border">
-            </div>
-        </div>
-
-        <div class="right border">
-            <button onclick="ChangeTheme()">Change Theme</button>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit architecto eaque quas, eveniet consectetur ipsum sint quis, alias provident quo quasi reiciendis veniam corrupti sed dicta earum sequi, dolore fuga quae corporis. Aspernatur corrupti at enim delectus temporibus nam deserunt non blanditiis adipisci sequi possimus error pariatur ducimus, quisquam eum neque eos doloremque, dolorum recusandae ipsam, maxime suscipit. Omnis, aut doloremque? Voluptatem, quibusdam! Earum cupiditate at, hic quod incidunt culpa dolore odit itaque iure nesciunt officia exercitationem labore similique minus ea. Enim aspernatur reprehenderit nemo adipisci quia repudiandae, expedita quod corporis? Itaque nulla cupiditate iusto ipsam dolorum debitis assumenda ab nemo maiores. Provident molestiae enim veniam ut quibusdam ratione ipsum deleniti nisi, aut ipsa eos similique voluptate eligendi accusantium eveniet tempore veritatis sit est fugit. Id hic vitae doloremque culpa, sit qui, numquam minima sequi reprehenderit, dolore non maiores debitis veniam consequuntur. Ducimus dicta minima expedita hic saepe optio ratione eveniet eligendi magni iste modi corrupti tempora impedit sed totam illo maiores praesentium, numquam quod officiis laborum accusantium. Natus corrupti, voluptas illo dignissimos facere amet architecto dolor officia enim eius rerum in? Dolore ipsam reiciendis porro mollitia ex magni, repellendus natus cupiditate doloribus dolor culpa cum maiores dignissimos doloremque asperiores ipsa impedit modi. Laborum vero mollitia ab id aperiam! Pariatur neque consequuntur iste! Eius, distinctio? Autem nesciunt voluptate tenetur harum, ipsum facere consequuntur, quas aperiam ea architecto reiciendis, maiores suscipit modi labore accusamus molestiae expedita. Enim, provident? Cupiditate culpa iste nulla in quidem. Cum pariatur reprehenderit sunt deserunt quam deleniti rem nulla consequatur consectetur aut provident doloremque error cumque vitae vero exercitationem repellendus hic, quisquam accusantium. Et reprehenderit minus autem vitae ducimus eum distinctio labore laboriosam harum neque exercitationem officia voluptatum, nulla temporibus tempora! Odio rem, quasi mollitia voluptas cupiditate accusantium earum eos, porro libero officiis hic laborum doloremque atque! Veritatis tempora fuga esse aspernatur. In quasi facilis placeat molestias? Consectetur repudiandae harum rem eum cumque, delectus inventore officia eius recusandae dignissimos libero accusantium pariatur ipsa. Molestias, ullam! Ea praesentium laborum maiores laudantium harum, commodi suscipit officiis nesciunt sit asperiores assumenda ipsa neque consequuntur inventore esse. Et dolores eum possimus iusto qui doloribus labore numquam laboriosam. Voluptatum, natus! Blanditiis perspiciatis ut saepe dignissimos natus pariatur nemo quidem minima repellat quibusdam. Dicta delectus explicabo cupiditate eligendi exercitationem veniam reprehenderit beatae aspernatur deserunt officiis provident iste blanditiis fugit, eaque voluptas culpa mollitia sint commodi assumenda voluptatibus nisi veritatis excepturi laudantium. Rem recusandae voluptatum hic quas aliquid molestias! Et, non commodi? Deserunt fuga nam nemo aliquid doloribus, tempora dignissimos ea veniam, architecto nihil earum perferendis autem expedita eius similique labore quibusdam, sit cum soluta? Ratione tenetur saepe nam dolore officia, modi, ad quia ex mollitia voluptates ipsa error, laboriosam amet voluptate sed. Sequi asperiores blanditiis hic dolorum ratione nesciunt amet cumque, recusandae possimus, magni officia, odit accusamus ipsa fuga inventore quis pariatur animi nulla? Quas incidunt cumque maxime minima quam inventore esse, distinctio possimus illum dolores quidem, deserunt qui reiciendis! Odio asperiores eum fugiat, doloribus animi cumque ea, neque ex esse nemo ipsam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem porro aperiam est vel assumenda nostrum doloremque natus dolorem harum ipsa! Itaque minus nam omnis et facilis sed voluptate voluptatem, iste ullam. Provident, perspiciatis? Modi accusamus labore odio dolorem eaque, facilis facere itaque vero officiis voluptates pariatur praesentium et sequi ad beatae, aliquid fugiat impedit! Culpa sunt quidem ducimus cumque ea enim vel debitis nisi officia? Fuga maiores aspernatur sint enim cumque labore adipisci deleniti, quia ut voluptatum error minus, ad odio asperiores quos facere! Illum consectetur aperiam quo nulla modi maxime voluptas atque! Eligendi sit facere et aliquid assumenda accusantium ullam dolor corrupti laudantium rem, aliquam quaerat earum natus laborum aut in facilis commodi, temporibus molestiae nemo dicta. Est quasi vel, assumenda fugiat commodi unde nesciunt autem quos esse ut! Possimus nihil voluptatum earum tempore aspernatur culpa doloribus alias, quaerat sint quidem iusto aut officiis vitae totam fugit atque libero tenetur est rerum impedit. Officiis nisi eius quasi dolorum facere veritatis labore praesentium vel ea numquam voluptatum doloribus officia a tempore ipsam expedita assumenda amet eligendi debitis perspiciatis, in sunt dolore harum laudantium! Amet odit suscipit asperiores, non, dolorem quisquam possimus repudiandae minima enim dicta distinctio, nostrum tempora. Architecto perspiciatis animi iste assumenda doloremque ipsum accusamus itaque autem ipsam quibusdam ab, distinctio officiis tempora mollitia, velit omnis facilis reiciendis numquam vitae laudantium voluptatem! Ducimus magnam earum recusandae, animi maxime placeat, repellendus commodi possimus blanditiis quaerat laudantium voluptate corrupti alias eius nulla! Quas amet ab quidem architecto unde molestiae, animi, tenetur natus qui consequatur quis. Unde corporis fugit quasi animi! Magni, debitis eveniet error harum ea placeat quibusdam asperiores? Excepturi consectetur distinctio commodi dolor rerum doloremque sequi rem expedita numquam laboriosam. Nostrum placeat accusantium earum similique. Quos nulla molestiae vitae nesciunt incidunt laborum velit animi, repudiandae ex, officia quo magnam, facilis dolorem. Laudantium ab sunt veniam a natus dignissimos fuga ratione quae placeat, debitis perferendis dolor provident sed corrupti, optio iure! Vitae dolorum rerum alias praesentium quam perferendis voluptas porro, nihil maiores modi, voluptatem pariatur dicta eligendi dolore architecto aliquam aut fuga tempora distinctio fugit necessitatibus! Minus deleniti dicta iste cum quia, fugiat provident adipisci laudantium. Velit qui obcaecati facere, dolor dolorem dolores cumque quis maiores ratione laboriosam delectus iste sunt? Nihil velit soluta maxime ducimus molestiae voluptatem dolores! Dicta modi alias asperiores similique, veniam voluptates quasi, rerum officia, ex non consequuntur ipsam quo. Sed expedita aliquam itaque. Corrupti magnam dicta blanditiis natus, suscipit dolore dignissimos quis rerum quos eligendi quas? Autem cum dignissimos praesentium error rerum necessitatibus? Repudiandae alias, similique repellat suscipit error facilis saepe pariatur accusantium autem deserunt rem consectetur, est corporis magnam veniam, rerum eveniet nesciunt beatae accusamus itaque enim consequuntur. Rem maiores tempore ad vel ipsa temporibus eaque beatae tenetur totam, consequuntur iure, neque natus nulla, impedit illo fuga culpa at. Ipsam laudantium temporibus, reiciendis ab consequatur dolorum, rem distinctio corrupti modi voluptatibus nihil tenetur eum molestias explicabo, vero tempora! Itaque, quod voluptatibus ab facere veniam suscipit illo, aut provident ad impedit, placeat aperiam fugit beatae similique.       </div>
-    </div>
-    <div class="music-player border ">
-        <div class="controls border flex" >
-        <div class="control-1">
-            <span class="material-symbols-outlined" style="font-size: 50px;" >
-                skip_previous
-                </span>
-                <span class="material-symbols-outlined" style="font-size: 50px;">
-                    play_circle
-                    </span>
-            <span class="material-symbols-outlined" style="font-size: 50px;">
-                skip_next
-                </span>
-            </div>
-            
-        <div class="control-2">
-            <span class="material-symbols-outlined" style="font-size: 50px;">
-                volume_up
-                </span>
-        </div>
-    </div>
-</div>
 </body>
 <script src="script.js"></script>
 

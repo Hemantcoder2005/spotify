@@ -47,6 +47,7 @@
 }
 
 .library{
+    margin-top: 10px;
     background-color: #201f1f;
 }
 
@@ -86,8 +87,8 @@
     background-image: url("img/arjit\ singh");
     width: 73px;
     height: 67px;
-    background-size: cover;
-    background-position: center;
+    background-size: ;
+    background-position: top;
     border-radius: 40px;
 }
 
@@ -107,16 +108,101 @@
 }
 .controls{
     padding: 10px;
-    justify-content: center;
+    
     height: 9vh;
-    gap: 50%;
-    align-items: baseline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.navigation{
+    height: 8%;
+    background-color: #201f1f;
+    justify-content: space-between;
+    
+}
+.navigation *{
+    padding: 9px;
+}
+button{
+    padding: 7px;
+    border: 2px solid white;
+    border-radius: 64px;
+}
+.auth{
+    padding-right: 14px;
+}
+
+.playlist h2{
+    margin: 18px;
+}
+
+.list-playlist{
+    height: 20%;
+    padding: 18px;
+    justify-content: space-evenly;
+    /* background-image: linear-gradient(to bottom, green top, black ); */
+}
+
+.card{
+    height: 200px;
+    width: 219px;
+    padding: 20px;
+    background-color: #201f1f;
+    border-radius: 20px;
+}
+
+.inner-card{
+    height: 141px;
+    background-image: url('img/jubinwebp');
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-position: top;
+}
+
+.card-title{
+    height: 54px;
+    text-align: center;
+    padding: 1px;
+    background-color: #201f1f;
+}
+
+.card-title *{
+    margin-top: 5px;
+}
+
+.card-play{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 229px;
+    background-color: rgb(5, 172, 5);
+    cursor: pointer;
+    margin: 8px;
+    
+}
+
+
+
+/* Hover props */
+.card:hover{
+    background-color: #353333;
+    transition:  0.5s ease-in-out;
 
 }
-.control-1{
-    position: fixed;
+.card:hover .card-play{
+    opacity: 1;
+    transition:  0.5s ease;
 }
-.control-2{
-    
-    
+
+.card:hover .card-play:hover{
+    transform: scale(1.1);
+    transition:  0.5s ease-in-out;
+
 }
