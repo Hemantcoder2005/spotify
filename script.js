@@ -1,97 +1,84 @@
-//Storing Theme Prefernce in localStorage
+ function createCard(classname,dir, background, title1, subject1) {
+    let playlistContainer = document.getElementById(classname);
+    let card = document.createElement('div');
+    card.classList.add('card');
 
-
-
-//ChangeTheme By buuton
-function ChangeTheme() {
-    var body_id=document.getElementById("body")
-    body_id.classList.toggle("bg-black")
-    body_id.classList.toggle("bg-white")
-
-}
-
-//For playlist Setting ids
-// let card=document.getElementById('card')
-// let title=document.getElementById('title')
-// let subject =document.getElementById('subject')
-//  let thumbnail=document.getElementById('inner-card')
-
-// let playListContainer=document.getElementById('playlist')
-
-// let playlist_json=fetch("/playlists.json")
-
-// playlist_json.then((value1)=>{
-//     return value1.json()
-// }).then((value2)=>{
-//     for(let key in value2){
-//     //    title.textContent=value2[key].title
-//     //    subject.textContent=value2[key].subject
-//     //    thumbnail.style.backgroundImage=`url("${value2[key].img}")`
-
-       
-//     }
-// })
-
-
-// Fetch JSON data
-let playlistContainer = document.getElementById('playlistContainer');
-let store_dirs=[]
-let playlist_json = fetch("/playlists.json")
-playlist_json.then((value1) => {
-    return value1.json()
-}).then((value2) => {
-    for (let key in value2) {
-        // Create elements for each playlist card
-        let card = document.createElement('div');
-        card.classList.add('card');
-
-        let innerCard = document.createElement('div');
-        innerCard.classList.add('inner-card');
-        innerCard.style.backgroundImage = `url("${value2[key].img}")`;
-
-        let cardPlay = document.createElement('div');
-        cardPlay.classList.add('card-play');
-        cardPlay.innerHTML = '<span class="material-symbols-outlined">play_circle</span>';
-
-        let cardTitle = document.createElement('div');
-        cardTitle.classList.add('card-title');
-
-        let strong = document.createElement('strong');
-        let title = document.createElement('p');
-        title.textContent = value2[key].title;
-
-        let subject = document.createElement('p');
-        subject.textContent = value2[key].subject;
-        subject.style.fontSize = '13px';
-        subject.style.color = 'rgb(172, 177, 182)';
-
-        // Append elements to their respective parent elements
-        innerCard.appendChild(cardPlay);
-        cardTitle.appendChild(strong);
-        strong.appendChild(title);
-        cardTitle.appendChild(subject);
-        card.appendChild(innerCard);
-        card.appendChild(cardTitle);
-
-        // Append the card to the playlist container
-        playlistContainer.appendChild(card);
-
-        store_dirs.push(value2[key].dir)
-    }
-});
-
-console.log(store_dirs)
-async function loadMusic(dir){
-    let final_data=[]
-    let data=await fetch("/playlists/Punjabi/")
-    console.log(dir)
-}
-
-loadMusic(store_dirs[0])
-
+    let innerCard = document.createElement('div');
+    innerCard.classList.add('inner-card');
+    innerCard.style.backgroundImage = `url("${background}")`;
 
     
+   
+    
+    
+    
+    let cardPlay = document.createElement('div');
+    cardPlay.classList.add('card-play');
+    cardPlay.innerHTML = '<span class="material-symbols-outlined">play_circle</span>';
+    
+    let audio=document.createElement('audio')
+    audio.src=dir+title1+","+subject1+".mp3"
+    audio.classList('audio')
 
+    let cardTitle = document.createElement('div');
+    cardTitle.classList.add('card-title');
 
+    let strong = document.createElement('strong');
+    let title = document.createElement('p');
+    title.textContent = title1;
 
+    let subject = document.createElement('p');
+    subject.textContent = subject1;
+    subject.style.fontSize = '13px';
+    subject.style.color = 'rgb(172, 177, 182)';
 
+    // Append elements to their respective parent elements
+    innerCard.appendChild(cardPlay);
+    cardTitle.appendChild(strong);
+    strong.appendChild(title);
+    cardTitle.appendChild(subject);
+    card.appendChild(innerCard);
+    card.appendChild(cardTitle);
+
+    // Append the card to the playlist container
+    playlistContainer.appendChild(card);
+    return audio
+}
+
+async function fetchSongs() {
+    let songs = [];
+    try {
+        let response = await fetch("/playlists.json");
+        if (response.ok) {
+            let playlist_json = await response.json();
+            for (let key in playlist_json) {
+                let playlist = playlist_json[key];
+                createCard("playlistContainer",playlist.dir, playlist.img, playlist.title, playlist.subject);
+                let dirs = playlist.dir;
+                for (let index = 0; index < playlist.songs.length; index++) {
+                    const song = playlist.songs[index];
+                    songs.push(dirs + song);
+                    // Splitting the song name assuming it's in the format "SongName, ArtistName"
+                    const songDetails = song.split(','); // Splitting the song name by comma
+                    if (songDetails.length >= 2) {
+                        createCard("SongsContainer",dirs, dirs + song + ".jpeg", songDetails[0], songDetails[1]);
+                    } else {
+                        createCard("SongsContainer", dirs + song + ".jpeg", song, ""); // If no artist name is available
+                    }   
+                }
+            }
+            return songs;
+        } else {
+            throw new Error('Failed to fetch playlists');
+        }
+    } catch (error) {
+        console.error('Error fetching playlists:', error);
+        return songs; // Return empty array or handle error as needed
+    }
+}
+
+fetchSongs();
+
+function controlSong{
+    
+}

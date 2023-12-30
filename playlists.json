@@ -3,25 +3,31 @@
         "title":"Punjabi",
         "subject":"Catch up punjabi tracks",
         "img":"/playlists/Punjabi/Thumbnail.webp",
-        "dir":"/playlists/Punjabi/"
+        "dir":"/playlists/Punjabi/",
+        "songs":["One Love ,Subh "]
+            
+        
     },
     "ply2":{
         "title":"Rock Hindi",
         "subject":"Catch up Rock Hindi tracks",
         "img":"/playlists/Rock Hindi/Thumbnail.webp",
-        "dir":"/playlists/Rock Hindi/"
+        "dir":"/playlists/Rock Hindi/",
+        "songs":["ROCK ON Revisited,Farhan Akhtar Shraddha Kapoor"]
     },
     "ply3":{
         "title":"Romantic English",
         "subject":"Catch up Romantic English tracks",
         "img":"/playlists/Romantic English/Thumbnail.webp",
-        "dir":"/playlists/Romantic English/"
-    },
+        "dir":"/playlists/Romantic English/",
+        "songs":[]
+    },  
     "ply4":{
         "title":"Romantic Hindi",
         "subject":"Catch up Romantic Hindi tracks",
         "img":"/playlists/Romantic Hindi/Thumbnail.jpeg",
-        "dir":"/playlists/Romantic Hindi/"
+        "dir":"/playlists/Romantic Hindi/",
+        "songs":["Janiye,Vishal Mishra"]
     }
 
     
