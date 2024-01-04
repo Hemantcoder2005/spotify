@@ -15,10 +15,13 @@
     let cardPlay = document.createElement('div');
     cardPlay.classList.add('card-play');
     cardPlay.innerHTML = '<span class="material-symbols-outlined">play_circle</span>';
-    
+    cardPlay.id="controls"
+
     let audio=document.createElement('audio')
     audio.src=dir+title1+","+subject1+".mp3"
-    audio.classList('audio')
+    audio.id="audio"
+
+
 
     let cardTitle = document.createElement('div');
     cardTitle.classList.add('card-title');
@@ -39,6 +42,7 @@
     cardTitle.appendChild(subject);
     card.appendChild(innerCard);
     card.appendChild(cardTitle);
+    card.appendChild(audio)
 
     // Append the card to the playlist container
     playlistContainer.appendChild(card);
@@ -79,6 +83,22 @@ async function fetchSongs() {
 
 fetchSongs();
 
-function controlSong{
-    
-}
+
+
+// Get references to the audio element and buttons
+const audio = document.getElementById('audio');
+const playButton = document.getElementById('controls');
+const pauseButton = document.getElementById('pauseButton');
+
+
+// Play audio when the "Play" button is clicked
+playButton.addEventListener('click', () => {
+    audio.play();
+});
+
+// Pause audio when the "Pause" button is clicked
+pauseButton.addEventListener('click', () => {
+    audio.pause();
+});
+
+
