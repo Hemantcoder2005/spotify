@@ -7,19 +7,16 @@
     innerCard.classList.add('inner-card');
     innerCard.style.backgroundImage = `url("${background}")`;
 
-    
-   
-    
-    
-    
     let cardPlay = document.createElement('div');
     cardPlay.classList.add('card-play');
     cardPlay.innerHTML = '<span class="material-symbols-outlined">play_circle</span>';
     cardPlay.id="controls"
 
-    let audio=document.createElement('audio')
-    audio.src=dir+title1+","+subject1+".mp3"
-    audio.id="audio"
+    let audio =document.createElement('div');
+    audio.classList.add('audio')
+    let audio_path=document.createElement('p');
+    audio_path.textContent=dir+"/"+title1+"/"+subject1+".mp3"
+    console.log(dir+title1+subject1+".mp3")
 
 
 
@@ -84,21 +81,5 @@ async function fetchSongs() {
 fetchSongs();
 
 
-
-// Get references to the audio element and buttons
-const audio = document.getElementById('audio');
-const playButton = document.getElementById('controls');
-const pauseButton = document.getElementById('pauseButton');
-
-
-// Play audio when the "Play" button is clicked
-playButton.addEventListener('click', () => {
-    audio.play();
-});
-
-// Pause audio when the "Pause" button is clicked
-pauseButton.addEventListener('click', () => {
-    audio.pause();
-});
 
 
