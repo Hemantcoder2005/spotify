@@ -22,43 +22,49 @@
         <img class="logo" src="svgs/spotify.svg" alt="logo">
         <h1 class="logohead">Spotify</h1>
     </div>
-            <div class="right flex ">
-                <div class="playlist">
-                        
-                        <div id="SongsContainer" class="list-playlist" > </div> 
-                    
+    <div class="right flex ">
+        <div class="playlist">
+
+            <div id="SongsContainer" class="list-playlist"> </div>
+
+        </div>
+    </div>
+
+    <div class="music-player  ">
+        <div class="controls ">
+            <p class="song-info">Playing</p>
+
+            <div class="control-1">
+
+                <span class="material-symbols-outlined previous-song cursor">
+                    skip_previous
+                </span>
+                <span class="material-symbols-outlined playx cursor" style="animation: spin 1s alternate">
+                    play_circle
+                </span>
+                <span class="material-symbols-outlined next-song cursor">
+                    skip_next
+                </span>
+            </div>
+
+            <div class="Running flex">
+                <div class="CurrentLen">
+                    <p>00:00</p>
+                </div>
+                <div>/</div>
+                <div class="SongLen">
+                    <p>00:00</p>
                 </div>
             </div>
 
-            <div class="music-player  ">
-                <div class="controls "> 
-                    <p class="song-info">Playing</p>
+        </div>
 
-                    <div class="control-1">
-                        
-                        <span class="material-symbols-outlined previous-song cursor">
-                            skip_previous
-                        </span>
-                        <span class="material-symbols-outlined playx cursor" style="animation: spin 1s alternate">
-                            play_circle
-                        </span>
-                        <span class="material-symbols-outlined next-song cursor" >
-                            skip_next
-                        </span>
-                    </div>
-                    
-                    <div class="Running flex" >
-                        <div class="CurrentLen"><p>00:00</p></div>
-                        <div>/</div>
-                        <div class="SongLen"><p>00:00</p></div>
-                    </div>
-                    
-                </div>
-
-                <div class="seek-bar">
-                    <div class="player-bar cursor"><div class="circle"></div></div>
-                </div>
+        <div class="seek-bar">
+            <div class="player-bar cursor">
+                <div class="circle"></div>
             </div>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 
