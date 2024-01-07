@@ -2,103 +2,62 @@
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    /* border-radius: 20px; */
+    /* border-radius: 39px; */
 }
 .bg-black{
     background-color: black;
     color: white;
 }
-.bg-white
-{
-    background-color: white;
-    color: black;
-    }
 
-.left{
-    width: 25vw;
-    /* background-color: #3a3838; */
-    
-    
+.logo{
+    width: 50px;
+    animation: spin 0.3s alternate-reverse ;
     
 }
+.logohead{
+    font-size: 23px;
+    color: rgb(90, 162, 90);
+}
+.navbar{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #353333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 40px;
+}
 
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 .right{
-    width: 75vw;
-    height: 84vh;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
     overflow-y: scroll;
     
 }
 
-.home ul li{
-    display: flex;
-    width: 70px;
-    gap: 13px;
-    list-style: none;
-
-   
+.play-button{
+    width: 57px;
+    height: 57px;
 }
-
-.home ul{
-    margin-top: 20px;
-}
-.home{
-    padding: 10px;
-    background-color: #201f1f;
-}
-
-.library{
-    margin-top: 10px;
-    background-color: #201f1f;
-}
-
-.heading-lib{
-    align-items: center;
-    gap: 8px;
-}
-.heading-lib h1{
-    font-size: 15px;
-}
-
-.heading-lib .add{
-    gap: 20px;
-}
-.tags{
-    gap: 10px;
-}
-.tags p{ 
-    border: 1px solid black;
-    background-color: #3a3838;
-    font-size: 12px;
-    border-radius: 52px;
-    margin-top: 10px;
-    padding: 5px; 
-}
-
-.artits-section {
-    padding: 16px;
-    border: 1px solid #201f1f;
-    border-radius: 40px;
-    background-color: #201f1f;
-    align-items: center;
-    gap: 2px;
-}
-
-.artits-section .image{
-    background-image: url("img/arjit\ singh");
-    width: 73px;
-    height: 67px;
-    background-size: ;
-    background-position: top;
-    border-radius: 40px;
-}
-
 .music-player{
     bottom: 0;
     position: fixed;
     width: 100vw;
     height: 14vh;
     background-color: #201f1f;
-    position: fixed;
+    border-radius: 40px;
     
 }
 
@@ -109,67 +68,57 @@
 }
 .controls{
     padding: 10px;
-    
     height: 9vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 24px;
 }
-
+.control-1 span{
+    font-size: 43px;
+}
 .seek-bar{
     display: flex;
     justify-content: center;
     position: absolute;
     width: 100%;
+    
 }
+
 .player-bar{
-    border: 2px solid green;
-    background-color: green;
+    /* border: 2px solid white; */
+    background-color: white;
     position: absolute;
     width: 90%;
     border-radius: 55px;
-    height: 1px;
+    height: 6px;
+    transition: left 0.5s;
+    
 }
 .circle{
-    width: 12px;
-    height: 12px;
-    border: solid 2px white;
+    width: 15px;
+    height: 15px;
+    /* border: solid 2px white; */
     border-radius: 50px;
     background-color: white;
     position: absolute;
     bottom: -6px;
     left: 0%;
     transition: left 0.5s;
-}
-.navigation{
-    height: 8%;
-    background-color: #201f1f;
-    justify-content: space-between;
-    position: absolute;
-    width: 75%;
-    
-}
-.navigation *{
-    padding: 9px;
-}
-button{
-    padding: 7px;
-    border: 2px solid white;
-    border-radius: 64px;
-}
-.auth{
-    padding-right: 14px;
-    
+
 }
 
-.playlist h2{
-    margin: 18px;
+.playlist{
+    margin-top: 75px;
+    margin: 75px;
+    align-items: center;
+    justify-content: center;
 }
-
 .list-playlist{
+    /* display: flex; */
     height: 20%;
-    padding: 18px;
-    justify-content: space-evenly;
+    
+    /* justify-content: space-evenly; */
     /* background-image: linear-gradient(to bottom, green top, black ); */
 }
 
@@ -179,6 +128,7 @@ button{
     padding: 20px;
     background-color: #201f1f;
     border-radius: 20px;
+    margin-bottom: 18px;
 }
 
 .inner-card{
@@ -215,9 +165,6 @@ button{
     margin: 8px;
     
 }
-
-
-
 /* Hover props */
 .card:hover{
     background-color: #353333;
@@ -227,13 +174,42 @@ button{
 .card:hover .card-play{
     opacity: 1;
     transition:  0.5s ease;
+    animation: spin 0.3s alternate-reverse ;
 }
 
 .card:hover .card-play:hover {
     transform: scale(1.1);
     transition:  0.5s ease-in-out;
+    
+    
 
 }
 .card:hover{
     transform: scale((1.2));
 }
+
+
+/* media query */
+@media screen and (max-width: 600px){
+    .controls{
+        font-size: 20px;
+    }
+    .controls .Running{
+        font-size: 10px;
+    }
+    .control-1 span{
+        font-size: 30px;
+    }
+    .song{
+        width: 100%;
+        flex:none;
+    }
+    .playlist h2{
+        font-size: 21px;
+    }
+    .right{
+        /* padding-righ: 50%; */
+    }
+}
+
+
