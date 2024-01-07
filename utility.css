@@ -1,5 +1,7 @@
 .flex{
     display: flex;
+    overflow-x: hidden;
+    padding: 10px;
 }
 
 .justify-center{
