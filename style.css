@@ -51,8 +51,20 @@ html, body {
     height: 80vh;
     display: flex;
     justify-content: center;
-    overflow-y: scroll;
-    
+    overflow-y: auto;
+}
+
+.right::-webkit-scrollbar{
+    width: 6px;
+}
+
+.right::-webkit-scrollbar-track{
+    background: rgb(20, 20, 20);
+}
+
+.right::-webkit-scrollbar-thumb{
+    background: rgb(48, 47, 47);
+    border-radius: 10px;
 }
 
 .play-button{
@@ -135,6 +147,7 @@ html, body {
     
     /* justify-content: space-evenly; */
     /* background-image: linear-gradient(to bottom, green top, black ); */
+
 }
 
 .card{
@@ -205,6 +218,7 @@ html, body {
 .card:hover{
     transform: scale((1.2));
 }
+
 
 
 /* media query */
